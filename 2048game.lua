@@ -347,6 +347,7 @@ function game_step(array)
 	end
 	if score > best_score then
 		best_score = score
+		Config.WriteInt("mini_games", "best_score", best_score)
 	end
 end
 
@@ -471,7 +472,6 @@ function draw_game_table()
 		end
 	end
 
-	-- draw numbers  on game table
 -- draw numbers  on game table
 	for i = 1, 4 do
 	    for j = 1, 4 do
@@ -529,8 +529,6 @@ function mg_2048.OnFrame()
 	-- game steps (is button down)
 	game_step(array_mg)
 
-
-	Config.WriteInt("mini_games", "best_score", best_score)
 end
 
 
