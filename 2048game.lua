@@ -342,8 +342,8 @@ function game_step(array)
 		end
 
 		create_new_var_in_game(array_mg)
-	elseif Input.IsKeyDownOnce(Enum.ButtonCode.KEY_J) then
-		array_mg[4][4] = 999999
+
+
 	end
 	if score > best_score then
 		best_score = score
